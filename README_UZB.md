@@ -364,7 +364,7 @@ Matritsalar bilan asosiy amallarni bajaring (qisman [yuqorida](#matritsalar-boyi
 - Kutubxona gcc kompilyatoridan foydalangan holda C11 standartidagi C tilida ishlab chiqilishi kerak
 - Kutubxona kodi develop tarmog’odagi src papkasida bo'lishi kerak
 - Eskirgan yoki iste’moldan chiqarilgan til konstruksiyalari va kutubxona funksiyalaridan foydalanmang. Til va kutubxonalar haqidagi rasmiy hujjatlardagi legacy va obsolete belgilarga e'tibor bering. POSIX.1-2017 standartiga e'tibor qarating.
-- Kod yozishda siz Google Style ga amal qilishingiz kerak
+- Kod yozishda C++ uchun Google Style ((havola)[(https://google.github.io/styleguide/cppguide.html)]) ga amal qiling.
 - Yechimni s21_matrix.a nomli statik kutubxona sifatida loyihalashtiring (s21_matrix.h sarlavha fayli bilan).
 - Kutubxona tuzilgan dasturlash tamoyillariga muvofiq ishlab chiqilishi kerak.
 - Har bir funksiyadan oldin s21_ prefiksidan foydalaning.
