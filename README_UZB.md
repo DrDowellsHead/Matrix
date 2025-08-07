@@ -159,7 +159,7 @@ int s21_eq_matrix(matrix_t *A, matrix_t *B);
 
 Ikkita A, B matritsalari agar ularning o'lchamlari mos kelsa va mos keladigan elementlar teng bo'lsa mos tushadi |A = B|, ya'ni barcha i, j A(i,j) = B(i,j).
 
-Taqqoslash verguldan keyin yettinchi belgigacha, uni ham o’z ichiga olgan holda amalga oshirilishi kerak.
+Taqqoslash verguldan keyin oltinchi belgigacha, uni ham o’z ichiga olgan holda amalga oshirilishi kerak.
 
 ### Matritsalarni qo'shish (sum_matrix) va ayirish (sub_ matrix)
 

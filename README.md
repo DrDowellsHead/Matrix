@@ -158,7 +158,7 @@ int s21_eq_matrix(matrix_t *A, matrix_t *B);
 
 The matrices A, B are equal |A = B| if they have the same dimensions and the corresponding elements are identical, thus for all i and j: A(i,j) = B(i,j)
 
-The comparison must be up to and including 7 decimal places.
+The comparison must be up to and including 6 decimal places.
 
 ### Adding (sum_matrix) and subtracting matrices (sub_matrix)
 
