@@ -91,13 +91,13 @@ A column matrix is a matrix with only one column:
 ```
     (1,1)
 A = (2,1)
-    (n,1)
+    (m,1)
 ```
 
 A row matrix is a matrix that has only one row:
 
 ```
-A = (1,1) (1,2) (1,m)
+A = (1,1) (1,2) (1,n)
 ```
 
 Tip: A column matrix and a row matrix are also often called vectors.

@@ -91,13 +91,13 @@ Ustun matritsasi – bu faqat bitta ustunga ega bo'lgan matritsa:
 ```
     (1,1)
 A = (2,1)
-    (n,1)
+    (m,1)
 ```
 
 Qator matritsasi – bu faqat bitta qatorga ega matritsa:
 
 ```
-A = (1,1) (1,2) (1,m)
+A = (1,1) (1,2) (1,n)
 ```
 
 Tip: ustun matritsasi va qator matritsasi ko'pincha vektorlar deb ham ataladi.
