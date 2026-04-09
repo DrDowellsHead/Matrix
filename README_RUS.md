@@ -123,7 +123,7 @@ typedef struct matrix_struct {
     double** matrix;
     int rows;
     int columns;
-} matrix_t;
+} s21_matrix;
 ```
 
 ## Операции над матрицами
@@ -136,13 +136,13 @@ typedef struct matrix_struct {
 ### Создание матриц (create_matrix)
 
 ```c
-int s21_create_matrix(int rows, int columns, matrix_t *result);
+int s21_create_matrix(int rows, int columns, s21_matrix *result);
 ```
 
 ### Очистка матриц (remove_matrix)
 
 ```c
-void s21_remove_matrix(matrix_t *A);
+void s21_remove_matrix(s21_matrix *A);
 ```
 
 ### Сравнение матриц (eq_matrix)
@@ -151,7 +151,7 @@ void s21_remove_matrix(matrix_t *A);
 #define SUCCESS 1
 #define FAILURE 0
 
-int s21_eq_matrix(matrix_t *A, matrix_t *B);
+int s21_eq_matrix(s21_matrix *A, s21_matrix *B);
 ```
 
 Две матрицы A, B совпадают |A = B|, если совпадают их размеры и соответствующие элементы равны, то есть при всех i, j A(i,j) = B(i,j).
@@ -161,8 +161,8 @@ int s21_eq_matrix(matrix_t *A, matrix_t *B);
 ### Сложение (sum_matrix) и вычитание матриц (sub_matrix)
 
 ```c
-int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+int s21_sum_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result);
+int s21_sub_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result);
 ```
 
 Суммой двух матриц A = m × n и B = m × n одинаковых размеров называется матрица C = m × n = A + B тех же размеров, элементы которой определяются равенствами C(i,j) = A(i,j) + B(i,j).
@@ -178,8 +178,8 @@ int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
 ### Умножение матрицы на число (mult_number). Умножение двух матриц (mult_matrix)
 
 ```c
-int s21_mult_number(matrix_t *A, double number, matrix_t *result);
-int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+int s21_mult_number(s21_matrix *A, double number, s21_matrix *result);
+int s21_mult_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result);
 ```
 
 Произведением матрицы A = m × n на число λ называется матрица B = m × n = λ × A, элементы которой определяются равенствами B = λ × A(i,j).
@@ -215,7 +215,7 @@ C(3,3) = A(3,1) × B(1,3) + A(3,2) × B(2,3) = 3 × 1 + 6 × 4 = 3 + 24 = 27
 ### Транспонирование матрицы (transpose)
 
 ```c
-int s21_transpose(matrix_t *A, matrix_t *result);
+int s21_transpose(s21_matrix *A, s21_matrix *result);
 ```
 
 Транспонирование матрицы А заключается в замене строк этой матрицы ее столбцами с сохранением их номеров.
@@ -229,7 +229,7 @@ A = A^T = 2 5 = 4 5 6
 ### Минор матрицы и матрица алгебраических дополнений (calc_complements)
 
 ```c
-int s21_calc_complements(matrix_t *A, matrix_t *result);
+int s21_calc_complements(s21_matrix *A, s21_matrix *result);
 ```
 
 Минором M(i,j) называется определитель (n-1)-го порядка, полученный вычёркиванием из матрицы A i-й строки и j-го столбца.
@@ -272,7 +272,7 @@ M. =  4 -14   8
 ### Определитель матрицы (determinant)
 
 ```c
-int s21_determinant(matrix_t *A, double *result);
+int s21_determinant(s21_matrix *A, double *result);
 ```
 
 Определитель (детерминант) — это число, которое ставят в соответствие каждой квадратной матрице и вычисляют из элементов по специальным формулам. \
@@ -296,7 +296,7 @@ A = 4 5 6
 ### Обратная матрица (inverse_matrix)
 
 ```c
-int s21_inverse_matrix(matrix_t *A, matrix_t *result);
+int s21_inverse_matrix(s21_matrix *A, s21_matrix *result);
 ```
 
 Матрицу A в степени -1 называют обратной к квадратной матрице А, если произведение этих матриц равняется единичной матрице.

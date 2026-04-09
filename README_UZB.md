@@ -126,7 +126,7 @@ typedef struct matrix_struct {
     double** matrix;
     int rows;
     int columns;
-} matrix_t;
+} s21_matrix;
 ```
 
 ## Matritsalar bo'yicha operatsiyalar
@@ -139,13 +139,13 @@ Barcha operatsiyalar (matritsalarni taqqoslashdan tashqari) olingan kodni qaytar
 ### Matritsalarni yaratish (create_matrix)
 
 ```c
-int s21_create_matrix(int rows, int columns, matrix_t *result);
+int s21_create_matrix(int rows, int columns, s21_matrix *result);
 ```
 
 ### Matritsalarni tozalash (remove_matrix)
 
 ```c
-void s21_remove_matrix(matrix_t *A);
+void s21_remove_matrix(s21_matrix *A);
 ```
 
 ### Matritsalarni taqqoslash (eq_matrix)
@@ -154,7 +154,7 @@ void s21_remove_matrix(matrix_t *A);
 #define SUCCESS 1
 #define FAILURE 0
 
-int s21_eq_matrix(matrix_t *A, matrix_t *B);
+int s21_eq_matrix(s21_matrix *A, s21_matrix *B);
 ```
 
 Ikkita A, B matritsalari agar ularning o'lchamlari mos kelsa va mos keladigan elementlar teng bo'lsa mos tushadi |A = B|, ya'ni barcha i, j A(i,j) = B(i,j).
@@ -164,8 +164,8 @@ Taqqoslash verguldan keyin oltinchi belgigacha, uni ham o’z ichiga olgan holda
 ### Matritsalarni qo'shish (sum_matrix) va ayirish (sub_ matrix)
 
 ```c
-int s21_sum_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
-int s21_sub_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+int s21_sum_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result);
+int s21_sub_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result);
 ```
 
 Bir xil o'lchamdagi ikkita A = m x n va B = m x n matritsalarining yig'indisi bir xil o'lchamdagi C = m x n = A + B matritsa bo'lib, uning elementlari C(i,j) = A(i,j) + B(i,j ) tengliklari bilan aniqlanadi. 
@@ -181,8 +181,8 @@ Bir xil o'lchamdagi ikkita A = m x n B = m x n matritsalar ayirmasi bir xil o'lc
 ### Matritsani songa ko'paytirish (mult_number). Ikki matritsani ko'paytirish (mult_matrix)
 
 ```c
-int s21_mult_number(matrix_t *A, double number, matrix_t *result);
-int s21_mult_matrix(matrix_t *A, matrix_t *B, matrix_t *result);
+int s21_mult_number(s21_matrix *A, double number, s21_matrix *result);
+int s21_mult_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result);
 ```
 
 A = m x n matritsaning λ soniga ko‘paytmasi B = m x n = λ x A matritsa bo‘lib, uning elementlari B = λ x A(i,j) tengliklari bilan aniqlanadi.
@@ -218,7 +218,7 @@ C(3,3) = A(3,1) × B(1,3) + A(3,2) × B(2,3) = 3 × 1 + 6 × 4 = 3 + 24 = 27
 ### Matritsaning transpozitsiyasi (transpose)
 
 ```c
-int s21_transpose(matrix_t *A, matrix_t *result);
+int s21_transpose(s21_matrix *A, s21_matrix *result);
 ```
 
 A matritsasining transpozitsiyasi bu matritsa qatorlarini raqamlarini saqlab qolgan holda ustunlari bilan almashtirishdan iborat.
@@ -232,7 +232,7 @@ A = A^T = 2 5 = 4 5 6
 ### Matritsa minori va algebraik qo’shimchalar matritsasi (calc_complements)
 
 ```c
-int s21_calc_complements(matrix_t *A, matrix_t *result);
+int s21_calc_complements(s21_matrix *A, s21_matrix *result);
 ```
 
 А i qatoridan va j ustunidan ayrilishidan olingan (n-1) tartibining aniqlovchisi Minor M (i, j) deb ataladi.
@@ -275,7 +275,7 @@ M. =  4 -14   8
 Matritsa aniqlovchisi (determinant)
 
 ```c
-int s21_determinant(matrix_t *A, double *result);
+int s21_determinant(s21_matrix *A, double *result);
 ```
 
 Aniqlovchi (determinant) – har bir kvadrat matritsaga tayinlangan va maxsus formulalar yordamida elementlardan hisoblangan raqam.
@@ -300,7 +300,7 @@ A = 4 5 6
 ### Teskari matritsa (inverse_matrix)
 
 ```c
-int s21_inverse_matrix(matrix_t *A, matrix_t *result);
+int s21_inverse_matrix(s21_matrix *A, s21_matrix *result);
 ```
 
 Agar bu matritsalarning ko'paytmasi bir xillik matritsasiga teng bo'lsa, -1 darajali A matritsa A kvadrat matritsaga teskari deyiladi.
