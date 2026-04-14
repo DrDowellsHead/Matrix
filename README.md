@@ -14,6 +14,17 @@ Implementation of the matrix.h library.
    3.1. [Part 1](#part-1-implementation-of-the-matrixh-library-functions)
 
 
+# Instructions 
+
+How to learn at “School 21”:
+
+- Here, you’ll find a unique learning experience with a lot of freedom. You’re given a task and left to find your own way to solve it, using whatever resources work best for you — whether that’s the Internet or AI tools like GigaChat. Just be mindful of information quality: verify, think critically, analyze, and compare.
+- Peer-to-peer (P2P) learning is the exchange of knowledge and experience with peers, where everyone acts as both mentor and student. This approach allows you to gain a deeper understanding of the material by learning from one another.
+- Feel free to ask for help: around you are peers who are also navigating this path for the first time. Share your own experience and ideas with others.  Join Rocket.Chat to stay updated with the latest community announcements. 
+- Your learning is meaningless if you just copy someone else’s solutions. When receiving help from others, always make sure you fully understand the “why”, “how”, and “purpose” behind the solution. Don’t be afraid to make mistakes. 
+- Does the task seem impossible? Take a break, get some fresh air and clear your mind — this has helped many people. Maybe after that, the solution will come to you naturally.
+- The learning process is just as important as the result. It’s not just about completing the task — it’s about understanding HOW to solve it. 
+
 # Chapter I  
 
 ![matrix](misc/eng/images/matrixx.png)
@@ -359,8 +370,9 @@ A^(-1) =  1/|A| * M^T. = -38  41 -34
 
 Implement basic operations with matrices (partially described [above](#matrix-operations)): create_matrix (creation), remove_matrix (cleaning and destruction), eq_matrix (comparison), sum_matrix (addition), sub_matrix (subtraction), mult_matrix (multiplication), mult_number (multiplication by number), transpose (transpose), determinant (calculation of determinant), calc_complements (calculation of matrix of algebraic complements), inverse_matrix (finding inverse of the matrix).
 
+- Before starting, clone the project from GitLab into a repository with the same name.
 - The library must be developed in C language of C11 standard using gcc compiler.
-- The library code must be located in the src folder on the develop branch.
+- The library code must be located in the _src_ folder on the _develop_ branch.
 - Do not use outdated and legacy language constructions and library functions. Pay attention to the legacy and obsolete marks in the official documentation on the language and the libraries used. Use the POSIX.1-2017 standard.
 - When writing code it is necessary to follow the Google style for C++ ([link](https://google.github.io/styleguide/cppguide.html)).
 - Make it as a static library named *s21_matrix.a* (with the s21_matrix.h header file).
@@ -372,3 +384,4 @@ Implement basic operations with matrices (partially described [above](#matrix-op
 - The gcov_report target should generate a gcov report in the form of an html page. Unit tests must be run with gcov flags to do this.
 - The matrix must be implemented as the structure described [above](#matrix-structure-in-c-language).
 - Verifiable accuracy of the fractional part is up to 6 decimal places.
+- Your directory should not contain any files other than those specified in the assignments.
