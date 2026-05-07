@@ -51,3 +51,26 @@ void s21_remove_matrix(s21_matrix *A) {
 	A->matrix = NULL;
 	
 }
+
+int s21_eq_matrix(s21_matrix *A, s21_matrix *B) {
+	if (A == NULL || B == NULL) {
+		return 1;
+		}
+		
+		for (int r1 = 0; r1< A->rows; r1++) {
+			for (int r2 = 0; r2 < B-> rows; r2++) {
+				if (A->matrix[i] != B->matrix[i]) {
+					return 2;
+					}
+				}
+			
+		for (int c1 = 0; c1< A->columns; c1++) {
+			for (int c2 = 0; c2 < B-> columns; c2++) {
+				if (A->matrix[i] != B->matrix[i]) {
+					return 2;
+					}
+				}
+			
+		return 0;
+		}
+	}
