@@ -75,8 +75,8 @@ int s21_eq_matrix(s21_matrix *A, s21_matrix *B) {
 }
 	
 int s21_sum_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result) {
-	sum_row = [];
-	sum_col = [];
+	double sum_row;
+	double sum_col;
 	
 	if (A->matrix == NULL || B->matrix == NULL) {
 		return 1;
@@ -87,18 +87,24 @@ int s21_sum_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result) {
 			sum_row = A->matrix[i] + B->matrix[i];
 			
 			if (r1 == NULL || r2 == NULL) {
-				return 2;
+				return 1;
 			}
 		return 0;
 	}
 	
 	for (int c1 = 0; c1 < A->rows; c1++) {
 		for (int c2 = 0; c2<B->columns; c2++) {
-			sum_row = A->matrix[i] + B->matrix[i];
+			sum_col = A->matrix[i] + B->matrix[i];
 			
 			if (c1 == NULL || c2 == NULL) {
-				return 2;
+				return 1;
 			}
+		}
+		
+		&result = sum_row + sum_col; 
+		
+		if (result == NULL) {
+			return 1;
 		}
 		
 		return 0;
