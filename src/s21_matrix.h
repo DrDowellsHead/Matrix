@@ -24,5 +24,6 @@ int s21_calc_complements(s21_matrix *A, s21_matrix *result);
 int s21_determinant(s21_matrix *A, double *result);
 int s21_inverse_matrix(s21_matrix *A, s21_matrix *result);
 bool s21_dimensions_equal(s21_matrix *A, s21_matrix *B);
+int s21_validate_matrix(s21_matrix *A);
 
 #endif
