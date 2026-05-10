@@ -1,5 +1,10 @@
 #ifndef S_21_MATRIX_H
 #define S_21_MATRIX_H
+#define SUCCESS 1
+#define FAILURE 0
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
 
 typedef struct matrix_struct {
     double **matrix;
@@ -18,7 +23,6 @@ int s21_transpose(s21_matrix *A, s21_matrix *result);
 int s21_calc_complements(s21_matrix *A, s21_matrix *result);
 int s21_determinant(s21_matrix *A, double *result);
 int s21_inverse_matrix(s21_matrix *A, s21_matrix *result);
-
-#endif21_matrix *result);
+bool s21_dimensions_equal(s21_matrix *A, s21_matrix *B);
 
 #endif
