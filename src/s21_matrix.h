@@ -5,6 +5,7 @@
 #include <math.h>
 #include <stdbool.h>
 #include <stddef.h>
+#include <stdlib.h>
 
 typedef struct matrix_struct {
     double **matrix;

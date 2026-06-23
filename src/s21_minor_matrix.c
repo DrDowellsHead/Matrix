@@ -6,11 +6,16 @@ int s21_minor_matrix(s21_matrix *A, int excluded_row, int excluded_col,
         return 1;
     }
 
+    if (A->rows <= 1 || A->columns <= 1) {
+        return 2;
+    }
+
     if (s21_create_matrix(A->rows - 1, A->columns - 1, result) != 0) {
         return 1;
     }
 
-    if (A->rows <= 1 || A->columns <= 1) {
+    if (excluded_row < 0 || excluded_row >= A->rows || excluded_col < 0 ||
+        excluded_col >= A->columns) {
         return 2;
     }
 

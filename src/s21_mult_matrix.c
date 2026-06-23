@@ -14,7 +14,7 @@ int s21_mult_matrix(s21_matrix *A, s21_matrix *B, s21_matrix *result) {
 	}
 
     for (int i = 0; i < A->rows; i++) {
-        for (int j = 0; j < A->columns; j++) {
+        for (int j = 0; j < B->columns; j++) {
 			double sum = 0;
 
 			for (int k = 0; k < A->columns; k++) {
