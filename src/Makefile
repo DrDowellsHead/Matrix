@@ -22,7 +22,8 @@ SRC = s21_create_matrix.c \
       s21_calc_complements.c \
       s21_determinant.c \
       s21_inverse_matrix.c \
-      s21_validate_matrix.c
+      s21_validate_matrix.c \
+      s21_dimensions_equal.c
 
 OBJ = $(SRC:.c=.o)
 
