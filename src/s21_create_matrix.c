@@ -11,7 +11,7 @@ int s21_create_matrix(int rows, int columns, s21_matrix *result) {
 
   /* LCOV_EXCL_START */
   if (result->matrix == NULL) {
-    result->rows = columns;
+    result->rows = 0;
     result->columns = 0;
     return 1;
   }
